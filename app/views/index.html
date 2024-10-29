@@ -1,0 +1,113 @@
+{% extends "includes/layouts/prototype-home-layout.html" %}
+{% block content %}
+<div class="app-masthead govuk-!-margin-top-0">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
+                    {{serviceName}}
+                </h1>
+                <div class="app-masthead__description"> 
+                    <h3 class="app-masthead__subtitle govuk-heading-m">
+                        A combined prototype of journeys from all court cases and release dates services.
+                    </h3>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div class="govuk-width-container govuk-!-margin-top-8">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+
+            <h2 class="govuk-heading-l">Prototypes</h2>
+
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  Before running a prototype, make sure you <a class="govuk-link--no-visited-state" href="/manage-prototype/clear-data">clear data</a>.
+                </strong>
+            </div>
+
+
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+                <div class="govuk-accordion__section">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="version-1">
+                            Version 1
+                            <strong class="govuk-tag govuk-tag--pink govuk-!-margin-left-1">
+                                For research
+                                </strong>
+                                <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-1">
+                                    In Design
+                                </strong>
+                        </span>
+                        </h2>
+                    </div> 
+                    <div id="" class="govuk-accordion__section-content" aria-labelledby="version-1">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-full">  
+                            </div>  <div class="govuk-grid-column-three-quarters"> 
+                                    <h4 class="govuk-heading-m">What we are testing</h4> 
+                                    <p class="govuk-body">This prototype will be used to test and end-to-end <b>data entry</b> scenario. This scenario will require the user to make use of CCaRD, CRDS, R&S and Adjustments. </p> 
+                                    <p class="govuk-body">In this round, we aim to understand:</p> 
+                                    <ul class="govuk-list govuk-list--bullet">
+                                        <li>How do users feel about being able to input data and calculate dates in one system? (ie not switching between NOMIS and CRDS)</li> 
+                                        <li>Do users pause or stop at any point? If so, why? (eg to check info?) or do in one go?</li> 
+                                        <li>Do users ever want to go back and review info? (eg before moving to next product)?</li> 
+                                    </ul>   
+                                    <h4 class="govuk-heading-m">Supporting documents</h4>
+                                    <ul class="govuk-list"> 
+                                        <li><a class="govuk-link" target="external" href="https://miro.com/app/board/uXjVNXHiBmQ=/?moveToWidget=3458764604846139783&cot=14">Example screens for E2E data entry journey (miro)</a></li>   
+                                        <li><a class="govuk-link" target="external" href="https://docs.google.com/spreadsheets/d/1pyGaok9-o3hX1PdE2ylA-hV39jItVfNwKKEQ2ptVryQ/edit?gid=464811674#gid=464811674">Scenario requirements (sheets)</a></li>    
+                                 
+                                    </ul> 
+
+                                    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+ 
+
+                                    <form action="post">
+                                    <h4 class="govuk-heading-m">Scenario 1</h4>
+                                    <p class="govuk-hint"></p>
+
+                                    {{govukButton({
+                                        text: "Launch scenario 1",
+                                        attributes: {
+                                        "formaction": "/v1/DPS-prisoner-profile?version=v1",
+                                        "formmethod": "post"
+                                        },
+                                        classes: "govuk-button--secondary"
+                                        })}} 
+                                    </form>  
+
+
+                                </div>
+                                  
+                    </div>
+                </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="govuk-grid-column-one-quarter"> 
+            <aside class="app-related" role="complementary" style="border-top: 2px solid #1d70b8; padding-top:15px">
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Useful links</h2>
+                <ul class="govuk-list"> 
+                    <li> 
+                        <li><a class="govuk-link" target="external" href="https://docs.google.com/presentation/d/13SdmMZQFrKPDRFLjuJ_2FdACgeVxsoIWBgonOiF-J1U/edit#slide=id.g30b2d91e4e9_0_443">E2E testing plan (slides)</a></li>   
+                    </li>  
+                    <li> 
+                        <li><a class="govuk-link" target="external" href="https://miro.com/app/board/uXjVMvrn1NA=/?moveToWidget=3458764601769776922&cot=14">E2E roadmap (miro)</a></li>   
+                    </li>  
+                </ul>
+                </aside>
+            
+        </div>
+    </div>
+</div> 
+
+{% endblock %}
