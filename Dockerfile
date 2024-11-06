@@ -15,8 +15,6 @@ COPY . .
 
 RUN npm install
 
-RUN npm run compile-sass
-
 RUN chown -R appuser:appgroup /app
 
 USER 1017
