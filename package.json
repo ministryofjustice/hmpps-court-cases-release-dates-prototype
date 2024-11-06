@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
-    "start": "govuk-prototype-kit start"
+    "start": "govuk-prototype-kit start",
+    "compile-sass": "sass --quiet-deps --no-source-map --load-path=node_modules/govuk-frontend/dist --load-path=node_modules/@ministryofjustice/frontend --load-path=. app/assets/sass/application.scss:./assets/stylesheets/application.css --style compressed"
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "2.0.1",
@@ -10,6 +11,9 @@
     "govuk-frontend": "5.7.1",
     "govuk-prototype-kit": "13.16.2",
     "hmpps-court-cases-release-dates-design": "^2.9.4"
+  },
+  "devDependencies": {
+    "sass": "^1.79.5"
   },
   "engines": {
     "node": "^20",
