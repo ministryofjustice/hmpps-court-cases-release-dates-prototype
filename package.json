@@ -10,7 +10,7 @@
     "@ministryofjustice/frontend": "^3.0.2",
     "govuk-frontend": "5.7.1",
     "govuk-prototype-kit": "13.16.2",
-    "hmpps-court-cases-release-dates-design": "^2.9.4"
+    "hmpps-court-cases-release-dates-design": "^2.9.5"
   },
   "devDependencies": {
     "sass": "^1.79.5"
