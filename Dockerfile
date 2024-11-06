@@ -1,4 +1,4 @@
-FROM node:18.16-bullseye-slim
+FROM node:20.18-bullseye-slim
 
 ENV NODE_ENV=production
 
@@ -14,6 +14,8 @@ RUN apt-get update && \
 COPY . .
 
 RUN npm install
+
+RUN npm run compile-sass
 
 RUN chown -R appuser:appgroup /app
 
