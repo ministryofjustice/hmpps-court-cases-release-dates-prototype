@@ -126,7 +126,7 @@
             <div class="govuk-summary-card__title-wrapper">
                 <h2 class="govuk-summary-card__title">Remand</h2>
                 <ul class="govuk-summary-card__actions">
-                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/remand/enter-remand">
                         Add new<span class="govuk-visually-hidden"> add new</span>
                     </a>
                     </li>
@@ -157,7 +157,7 @@
             <div class="govuk-summary-card__title-wrapper">
                 <h2 class="govuk-summary-card__title">Tagged bail</h2>
                 <ul class="govuk-summary-card__actions">
-                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/tagged-bail/add-tagged-bail">
                         Add new<span class="govuk-visually-hidden"> add new</span>
                     </a>
                     </li>
@@ -196,7 +196,7 @@
             <div class="govuk-summary-card__title-wrapper">
                 <h2 class="govuk-summary-card__title">Lawfully at large</h2>
                 <ul class="govuk-summary-card__actions">
-                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/lal/lal">
                         Add new<span class="govuk-visually-hidden"> add new</span>
                     </a>
                     </li>
@@ -230,7 +230,7 @@
             <div class="govuk-summary-card__title-wrapper">
                 <h2 class="govuk-summary-card__title">RADA (Restore additional days awarded)</h2>
                 <ul class="govuk-summary-card__actions">
-                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="rada.html">
+                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/rada/rada">
                         Add new<span class="govuk-visually-hidden"> add new</span>
                     </a>
                     </li>
@@ -264,7 +264,7 @@
                 <h2 class="govuk-summary-card__title">Special remission</h2>
                 <ul class="govuk-summary-card__actions">
                     <li class="govuk-summary-card__action">
-                        <a class="govuk-link" href="#">
+                        <a class="govuk-link" href="adjustments/special-remission/special-remission-question">
                             Add new<span class="govuk-visually-hidden"> add new</span>
                         </a>
                     </li>
@@ -340,17 +340,17 @@
             <div class="govuk-summary-card__title-wrapper">
                 <h2 class="govuk-summary-card__title">UAL (Unlawfully at large)</h2>
                 <ul class="govuk-summary-card__actions">
-                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="ual.html">Add new<span class="govuk-visually-hidden"> add new</span></a></li>
+                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/ual/ual">Add new<span class="govuk-visually-hidden"> add new</span></a></li>
                     
                 {% if data['toShow'] == 'ualAdded'%}
-                <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/view-ual">View<span class="govuk-visually-hidden"> View</span></a></li>
+                <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/ual/view-ual">View<span class="govuk-visually-hidden"> View</span></a></li>
             </ul>
         </div>
         <div class="adjustment-card_content">
             
             <span id="UAL" class="count govuk-body">2</span><span class="govuk-body">Days</span>
                     {% elif data['toShow'] == 'recallHistory' or data['toShow'] == 'calcComplete' %}
-                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/view-ual">View<span class="govuk-visually-hidden"> View</span></a></li>
+                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="adjustments/ual/view-ual"">View<span class="govuk-visually-hidden"> View</span></a></li>
                 </ul>
             </div>
             <div class="adjustment-card_content">

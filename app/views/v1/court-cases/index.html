@@ -50,7 +50,7 @@
                                 {% elif (courtCase.appearances.length == 1) and (lastAppearance['status'] == 'draft') %}
                                 <strong class="govuk-tag govuk-tag--blue">Draft</strong>
                                 {% else %}
-                                <a class="govuk-link govuk-link--no-visited-state" href="/{{data.prototypeVersion}}/create-appearance?courtIndex={{courtCaseIndex}}">Add appearance<span class="govuk-visually-hidden"> to court case</span></a>
+                                <a class="govuk-link govuk-link--no-visited-state" href="create-appearance?courtIndex={{courtCaseIndex}}">Add appearance<span class="govuk-visually-hidden"> to court case</span></a>
                                 {% endif %}
                             </li>
                         </ul>
@@ -374,7 +374,7 @@
                 {% endfor %}
                 {% else %}
                 <p class="govuk-body">There are no court cases recorded for Joe Bloggs.</p>
-                <p class="gouk-body"><a href="/{{data.prototypeVersion}}/create-court-case?route=new-court-case">Add a court case now</a>
+                <p class="gouk-body"><a href="create-court-case?route=new-court-case">Add a court case now</a>
                 </p>
                 {% endif %}
             </div>
@@ -722,7 +722,7 @@
                 {% endfor %}
                 {% else %}
                 <p class="govuk-body">There are no court cases recorded for Joe Bloggs.</p>
-                <p class="gouk-body"><a href="/{{data.prototypeVersion}}/create-court-case?route=new-court-case">Add a court case now</a>
+                <p class="gouk-body"><a href="create-court-case?route=new-court-case">Add a court case now</a>
                 </p>
                 {% endif %}
             </div>
@@ -756,7 +756,7 @@
         <div class="actions-list">
             <ul class="govuk-list actions-list-list">
                 <span class="govuk-heading-m actions-list-header">Actions</span>
-                <li><a href="/{{data.prototypeVersion}}/create-court-case?route=new-court-case">Add a new court case</a></li>
+                <li><a href="create-court-case?route=new-court-case">Add a new court case</a></li>
                 <!-- <li><a href="">Record an appeal</a></li> -->
             </ul>
         </div>

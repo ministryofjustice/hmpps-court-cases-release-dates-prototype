@@ -1,4 +1,5 @@
-{% extends "../../includes/layouts/template-linear.html" %}
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
 {% block content %}
 
     <div class="">
@@ -15,7 +16,7 @@
                                First day spent UAL
                             </dt>
                             <dd id="start" class="govuk-summary-list__value">
-                                {{data['revocation-date-day']}} {{data['revocation-date-month']}} {{data['revocation-date-year']}}
+                               5 May 2023
                             </dd>
                             <dd class="govuk-summary-list__value">
                                 <a href="ual">Edit</a>
@@ -26,7 +27,7 @@
                                 Last day spent UAL
                             </dt>
                             <dd  id="end" class="govuk-summary-list__value">
-                                {{data['arrest-date-day']}}/{{data['arrest-date-month']}}/{{data['arrest-date-year']}}
+                                15 May 2023
                             </dd>
                             <dd class="govuk-summary-list__value">
                                 <a href="ual">Edit</a>
@@ -37,7 +38,7 @@
                                 Number of days
                             </dt>
                             <dd  id="days" class="govuk-summary-list__value">
-                                3
+                                11
                             </dd>
                             <dd class="govuk-summary-list__value">
                                 <a href="ual">Edit</a>
@@ -56,7 +57,7 @@
                         </div>
                     </dl>
                     <div class="govuk-button-group">
-                        <a href="view-ual?toShow=ualAdded"  id="confirmEditUALButton" class="govuk-button" data-module="govuk-button"  data-journey="7">
+                        <a href="../index-1"  id="saveUALButton" class="govuk-button" data-module="govuk-button"  data-journey="7">
                             Confirm and save
                         </a>
                         <a href="../index-1" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -67,6 +68,6 @@
             </div>
         </main>
     </div>
-<script src="/public/javascripts/adjustments-3-mvp.js"></script>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
 
 {% endblock %}
