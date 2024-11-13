@@ -58,6 +58,7 @@
                                     <ul class="govuk-list govuk-list--bullet">
                                         <li>How do users feel about being able to input data and calculate dates in one system? (ie not switching between NOMIS and CRDS)</li> 
                                         <li>Do users pause or stop at any point? If so, why? (eg to check info?) or do in one go?</li> 
+                                        <li>Do you users feel this will meet the outcomes (generated at the away day)?</li> 
                                         <li>Do users ever want to go back and review info? (eg before moving to next product)?</li> 
                                     </ul>   
                                     <h4 class="govuk-heading-m">Supporting documents</h4>
@@ -77,13 +78,12 @@
                                     {{govukButton({
                                         text: "Launch scenario 1",
                                         attributes: {
-                                        "formaction": "/v1/DPS-prisoner-profile",
+                                        "formaction": "/v1/DPS-prisoner-profile?version=v1",
                                         "formmethod": "post"
                                         },
                                         classes: "govuk-button--secondary"
                                         })}} 
-                                    </form>  
-
+                                    </form>   
 
                                 </div>
                                   
