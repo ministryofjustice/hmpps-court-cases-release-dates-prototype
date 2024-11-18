@@ -34,13 +34,17 @@
                         </tfoot>
                     </table>
                     <div id="alerthere"></div>
-                    <div class="govuk-button-group">
-                        <a href="../../adjustments" id="saveRemandButton" class="govuk-button" data-journey="1">
+                    <div class="govuk-button-group"> 
+                        <form action="../../adjustments?toDo=adjustmentsApplied" method="post">
+                            <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                             Confirm and save
-                        </a>
-                        <a href="../../adjustments" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                            Cancel
-                        </a>
+                            </button> 
+                        </form>  
+                        <form method="post" action="../../adjustments">
+                            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </button>
+                        </form> 
                     </div>
 
                     <a href="review-2.html" class="govuk-link">Return to remand details</a>

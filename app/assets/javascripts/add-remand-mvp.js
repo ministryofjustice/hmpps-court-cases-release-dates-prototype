@@ -888,7 +888,7 @@ if(DeleteTaggedBailPage) {
     deleteRecord("Tagged Bail",adjustments, selectedRemandPeriodID)
     let journey = deletebutton.getAttribute('data-journey')
     localStorage.setItem('activeJourney', parseInt(journey))
-    location.href = `../index-1.html`;
+    location.href = `../index.html`;
   })
 }
 
@@ -956,7 +956,8 @@ function displayNotification(journey, container){
   switch (journey) {
     case 1:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -964,7 +965,7 @@ function displayNotification(journey, container){
                Remand information has been saved
           </h3>
           <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -972,7 +973,8 @@ function displayNotification(journey, container){
       break;
     case 2:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -980,7 +982,7 @@ function displayNotification(journey, container){
               Remand details have been deleted
           </h3>
             <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -988,7 +990,8 @@ function displayNotification(journey, container){
       break;
     case 3:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -996,7 +999,7 @@ function displayNotification(journey, container){
               Tagged bail information has been saved
           </h3>
            <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -1004,7 +1007,8 @@ function displayNotification(journey, container){
       break;
     case 4:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -1012,7 +1016,7 @@ function displayNotification(journey, container){
               Tagged bail has been deleted
           </h3>
           <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -1020,7 +1024,8 @@ function displayNotification(journey, container){
       break;
     case 5:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -1028,7 +1033,7 @@ function displayNotification(journey, container){
               Remand updates have been saved
           </h3>
             <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -1036,7 +1041,8 @@ function displayNotification(journey, container){
       break;
     case 6:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -1044,7 +1050,7 @@ function displayNotification(journey, container){
               RADA information has been saved
           </h3>
            <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -1052,7 +1058,8 @@ function displayNotification(journey, container){
       break;
     case 7:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -1060,7 +1067,7 @@ function displayNotification(journey, container){
               UAL information has been saved
           </h3>
             <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -1068,7 +1075,8 @@ function displayNotification(journey, container){
       break;
     case 8:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -1076,7 +1084,7 @@ function displayNotification(journey, container){
               RADA details have been deleted
           </h3>
             <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -1084,7 +1092,8 @@ function displayNotification(journey, container){
       break;
     case 9:
       container.innerHTML = `
-   <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+   <div class="govuk-notification-banner govuk-notification-banner--success" style="border-color: #00703c;
+   background-color: #00703c;" role="alert"
                          aria-labelledby="govuk-notification-banner-title"
                          data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__content">
@@ -1092,7 +1101,7 @@ function displayNotification(journey, container){
               UAL details have been deleted
           </h3>
             <p class="govuk-body">Once all of the adjustments have been applied, you must
-              <a href="crd.html" class="govuk-notification-banner__link">calculate release dates</a>.
+              <a href="../calculate-release-dates/calculation-reason" class="govuk-notification-banner__link">calculate release dates</a>.
           </p>
       </div>
   </div>
@@ -1269,7 +1278,7 @@ if(editRemand) {
 
   saveEditButton.addEventListener('click', function(e){
     //e.preventDefault()
-    //location.href = 'index-1.html'
+    //location.href = 'index.html'
     //let journey = saveEditButton.getAttribute('data-journey')
     localStorage.setItem('activeJourney', 5)
     localStorage.setItem('unusedRemand', 90)
@@ -1370,7 +1379,7 @@ console.log(selectedRemandPeriodID)
      deleteRecord("Remand", adjustments, selectedRemandPeriodID)
     let journey = deletebutton.getAttribute('data-journey')
     localStorage.setItem('activeJourney', parseInt(journey))
-    location.href = `../index-1.html`;
+    location.href = `../index.html`;
   })
 }
 

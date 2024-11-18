@@ -63,7 +63,7 @@
                 <div class="govuk-footer__meta-custom">
                     <h3 class="govuk-heading-m">Support</h3>
                     <p class="govuk-footer__meta-custom govuk-list govuk-!-margin-bottom-8">
-                        Email <a class="govuk-link govuk-footer__link" href="mailto:ashley.wheat@digital.justice.gov.uk">ashley.wheat<wbr>@digital.justice.gov.uk</a> for support.<br>
+                        Email <a class="govuk-link govuk-footer__link" href="mailto:james.mckechnie@digital.justice.gov.uk">james.mckechnie<wbr>@digital.justice.gov.uk</a> for support.<br>
                     </p>
                 </div>
                 <ul class="govuk-footer__inline-list">
@@ -122,6 +122,28 @@ window.onload = function() {
     })
 }
 </script>
+
+<script>
+    window.onload = function() {
+        // Loops through dom and finds all elements with card--clickable class
+        document.querySelectorAll('.card--clickable').forEach(card => {
+            // Check if card has a link within it
+            if (card.querySelector('a') !== null) {
+                // Clicks the link within the heading to navigate to desired page
+                card.addEventListener('click', () => {
+                    card.querySelector('a').click()
+                })
+            }
+        })
+      const cl = document.getElementById("clear-storage");
+    
+      cl.addEventListener("click", function (e){
+    
+        e.preventDefault();
+        localStorage.clear()
+      } )
+    }
+    </script>
 {% endblock %}
 <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
 {% endblock %}

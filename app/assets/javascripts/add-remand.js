@@ -850,7 +850,7 @@ if(DeleteTaggedBailPage) {
     deleteRecord("Tagged Bail",adjustments, selectedRemandPeriodID)
     let journey = deletebutton.getAttribute('data-journey')
     localStorage.setItem('activeJourney', parseInt(journey))
-    location.href = `index-1.html`;
+    location.href = `index.html`;
   })
 }
 
@@ -1133,7 +1133,7 @@ if(editRemand) {
 
   saveEditButton.addEventListener('click', function(e){
     e.preventDefault()
-    location.href = 'index-1.html'
+    location.href = 'index.html'
     //let journey = saveEditButton.getAttribute('data-journey')
     localStorage.setItem('activeJourney', 5)
     localStorage.setItem('unusedRemand', 90)
@@ -1234,7 +1234,7 @@ console.log(selectedRemandPeriodID)
      deleteRecord("Remand", adjustments, selectedRemandPeriodID)
     let journey = deletebutton.getAttribute('data-journey')
     localStorage.setItem('activeJourney', parseInt(journey))
-    location.href = `index-1.html`;
+    location.href = `index.html`;
   })
 }
 
