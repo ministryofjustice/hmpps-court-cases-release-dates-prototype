@@ -1,50 +1,5 @@
 module.exports = {
-    courtCases: [
-    // { 
-    //     "appearances": [{  
-    //         "court-case-ref": "S20240154",
-    //         "overall-case-outcome": "Imprisonment",
-    //         "overall-conviction-date-day": "10",
-    //         "overall-conviction-date-month": "07",
-    //         "overall-conviction-date-year": "2024",
-    //         "next-court-date-set": "No",
-    //         "warrant-date-day": "10",
-    //         "warrant-date-month": "07",
-    //         "warrant-date-year": "2024",
-    //         "court-name": "Teesside Crown Court",
-    //         "overall-sentence-length-years": "0",
-    //         "overall-sentence-length-months": "6",
-    //         "overall-sentence-length-weeks": "0",
-    //         "overall-sentence-length-days": "0",
-    //         "status": "inactive",
-    //         "sentences": [{
-    //                 "count-number": "1",
-    //                 "conviction-date-day": "10",
-    //                 "conviction-date-month": "07",
-    //                 "conviction-date-year": "2024",
-    //                 "offence-start-date-day": "15",
-    //                 "offence-start-date-month": "04",
-    //                 "offence-start-date-year": "2024",
-    //                 "offence-end-date-day": "",
-    //                 "offence-end-date-month": "",
-    //                 "offence-end-date-year": "",
-    //                 "offence-code": [
-    //                     "TH68037"
-    //                 ],
-    //                 "offence-name": "TH68037 - Burglary other than dwelling - theft",
-    //                 "outcome": "Imprisonment",
-    //                 "sentence-type": "SDS (Standard Determinate Sentence)",
-    //                 "sentence-length-years": "0",
-    //                 "sentence-length-months": "6",
-    //                 "sentence-length-weeks": "0",
-    //                 "sentence-length-days": "0",
-    //                 "consecutive-concurrent": "Forthwith"
-    //             } 
-    //         ]
-    //     }
-    // ]
-    //     },
-        {
+    courtCases: [ {
             "source": "nomis",
             "appearances": [{
                     "court-case-ref": "T20240028",
@@ -80,7 +35,7 @@ module.exports = {
                             "offence-name": "CJ68010 - Speeding - exceed 30 mph on restricted road in England - manned equipment",
                             "outcome": "Imprisonment in default",
                             "sentence-type": "Imprisonment in default of a fine",
-                            "fine-amount": "£473",
+                            "fine-amount": "473",
                             // "sentence-length-years": "0",
                             // "sentence-length-months": "0",
                             // "sentence-length-weeks": "0",
@@ -105,7 +60,7 @@ module.exports = {
                             "offence-name": "TH68010 - Keep a vehicle without a valid vehicle licence",
                             "outcome": "Imprisonment in default",
                             "sentence-type": "Imprisonment in default of a fine",
-                            "fine-amount": "£130",
+                            "fine-amount": "130",
                             // "sentence-length-years": "0",
                             // "sentence-length-months": "0",
                             // "sentence-length-weeks": "0",
