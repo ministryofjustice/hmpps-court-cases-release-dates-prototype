@@ -210,38 +210,16 @@
  
         <h3 class="govuk-heading-l">Adjustments</h3>
 
-        {% if data['toShow'] == 'recallHistory' or data['toShow'] == 'calcComplete' %}
-
-        <h3 class="govuk-heading-m">Additions</h3>
-        <dl class="govuk-summary-list" style="margin-bottom: 10px;"> 
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    UAL (Unlawfully at large)
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    2 Days
-                </dd>
-            </div>
-        </dl>
-
-
-        <p class="govuk-body govuk-!-margin-top-6"><a href="adjustments">View all adjustments</a></p>
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
- 
-
-        {% elif data['toShow'] == 'ualAdded' or data['toShow'] == 'calc2Complete' or data['toDo'] == 'adjustmentsApplied' %}
-
-
         <h3 class="govuk-heading-m">Deductions</h3>
         <dl class="govuk-summary-list" style="margin-bottom: 10px;"> 
-            <!-- <div class="govuk-summary-list__row">
+            <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                     Remand
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <span id="RemandTotal" class="count govuk-body">0</span> <span class="govuk-body">days</span>
+                    <span id="RemandTotal" class="count govuk-body">3</span> <span class="govuk-body">days</span>
                 </dd>
-            </div> -->
+            </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                     Tagged bail
@@ -254,15 +232,7 @@
 
         <p class="govuk-body govuk-!-margin-top-6"><a href="adjustments">View all adjustments</a></p>
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
- 
-       
-        {% else %}
-
-        <p class="govuk-body">There are no active adjustments.</p>
-        <p class="govuk-body govuk-!-margin-top-6"><a href="adjustments">View all adjustments</a></p>
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-        {% endif %}
+  
 
         {% if data['toShow'] == 'recallHistory' or data['toShow'] == 'calcComplete' or data['toShow'] == 'ualAdded' or data['toShow'] == 'calc2Complete'%}
         <h3 class="govuk-heading-l">Recalls</h3>
