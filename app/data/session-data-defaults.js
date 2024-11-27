@@ -30,9 +30,9 @@ module.exports = {
                             "offence-end-date-month": "",
                             "offence-end-date-year": "",
                             "offence-code": [
-                                "CJ68010"
+                                "RR84061"
                             ],
-                            "offence-name": "CJ68010 - Speeding - exceed 30 mph on restricted road in England - manned equipment",
+                            "offence-name": "RR84061 - Speeding - exceed 30 mph on restricted road in England - manned equipment",
                             "outcome": "Imprisonment in default",
                             "sentence-type": "Imprisonment in default of a fine",
                             "fine-amount": "473",
@@ -55,9 +55,9 @@ module.exports = {
                             "offence-end-date-month": "",
                             "offence-end-date-year": "",
                             "offence-code": [
-                                "TH68010"
+                                "VE94015"
                             ],
-                            "offence-name": "TH68010 - Keep a vehicle without a valid vehicle licence",
+                            "offence-name": "VE94015 - Keep a vehicle without a valid vehicle licence",
                             "outcome": "Imprisonment in default",
                             "sentence-type": "Imprisonment in default of a fine",
                             "fine-amount": "130",
@@ -66,7 +66,7 @@ module.exports = {
                             // "sentence-length-weeks": "0",
                             // "sentence-length-days": "0",
                             "consecutive-concurrent": "Concurrent",
-                            "status": "inactive"
+                            "status": "active"
                         }
                     ]
                 }
@@ -98,9 +98,9 @@ module.exports = {
                             "offence-end-date-month": "",
                             "offence-end-date-year": "",
                             "offence-code": [
-                                "CJ88001"
+                                "DV04003"
                             ],
-                            "offence-name": "CJ88001 - Cause / allow the death of a child / vulnerable adult",
+                            "offence-name": "DV04003 - Cause / allow the death of a child / vulnerable adult",
                             "outcome": "Remand on conditional bail",
                         },
                         {
@@ -111,9 +111,9 @@ module.exports = {
                             "offence-end-date-month": "",
                             "offence-end-date-year": "",
                             "offence-code": [
-                                "TH68001"
+                                "CY33053"
                             ],
-                            "offence-name": "TH68001 - Assault / ill-treat / neglect / abandon a child / young person to cause unnecessary suffering / injury",
+                            "offence-name": "CY33053 - Assault / ill-treat / neglect / abandon a child / young person to cause unnecessary suffering / injury",
                             "outcome": "Remand on conditional bail",
                         }
                     ]
@@ -143,9 +143,9 @@ module.exports = {
                         "offence-end-date-month": "",
                         "offence-end-date-year": "",
                         "offence-code": [
-                            "CJ88001"
+                            "DV04003"
                         ],
-                        "offence-name": "CJ88001 - Cause / allow the death of a child / vulnerable adult",
+                        "offence-name": "DV04003 - Cause / allow the death of a child / vulnerable adult",
                         "outcome": "Remand on conditional bail",
                     },
                     {
@@ -156,9 +156,9 @@ module.exports = {
                         "offence-end-date-month": "",
                         "offence-end-date-year": "",
                         "offence-code": [
-                            "TH68001"
+                            "CY33053"
                         ],
-                        "offence-name": "TH68001 - Assault / ill-treat / neglect / abandon a child / young person to cause unnecessary suffering / injury",
+                        "offence-name": "CY33053 - Assault / ill-treat / neglect / abandon a child / young person to cause unnecessary suffering / injury",
                         "outcome": "Remand on conditional bail",
                     }
                     ]
@@ -199,9 +199,9 @@ module.exports = {
                             "offence-end-date-month": "",
                             "offence-end-date-year": "",
                             "offence-code": [
-                                "CJ88001"
+                                "DV04003"
                             ],
-                            "offence-name": "CJ88001 - Cause / allow the death of a child / vulnerable adult",
+                            "offence-name": "DV04003 - Cause / allow the death of a child / vulnerable adult",
                             "outcome": "Imprisonment",
                             "sentence-type": "SDS (Standard Determinate Sentence)",
                             "sentence-length-years": "9",
@@ -209,7 +209,8 @@ module.exports = {
                             "sentence-length-weeks": "0",
                             "sentence-length-days": "0",
                             "consecutive-concurrent": "Forthwith",
-                            "status": "active"
+                            "status": "active",
+                            "remanded": "true"
                         },
                         {
                             "count-number": "2",
@@ -223,9 +224,9 @@ module.exports = {
                             "offence-end-date-month": "",
                             "offence-end-date-year": "",
                             "offence-code": [
-                                "TH68001"
+                                "CY33053"
                             ],
-                            "offence-name": "TH68001 - Assault / ill-treat / neglect / abandon a child / young person to cause unnecessary suffering / injury",
+                            "offence-name": "CY33053 - Assault / ill-treat / neglect / abandon a child / young person to cause unnecessary suffering / injury",
                             "outcome": "Imprisonment",
                             "sentence-type": "SDS (Standard Determinate Sentence)",
                             "sentence-length-years": "6",
