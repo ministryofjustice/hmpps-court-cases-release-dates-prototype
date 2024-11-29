@@ -24,13 +24,14 @@
             <h2 class="govuk-heading-m">
                     Calculation details
             </h2> 
-            <dl class="govuk-summary-list govuk-summary-list--no-border">
+           
+            <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-6">
                 <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                     Date
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    {{ "today" | govukDate }}
+                    10 December 2024
                 </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -38,7 +39,7 @@
                     Reason
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    Recording a recall
+                    Transfer check
                 </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -48,8 +49,16 @@
                 <dd class="govuk-summary-list__value">
                     HMP Kirkham
                 </dd>
-                </div> 
-            </dl> 
+                </div>
+                <!-- <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Sentences included in this calculation
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    2
+                </dd>
+                </div> -->
+            </dl>
         </div>
     </div>
 </div>
@@ -68,7 +77,6 @@
 </nav>
 
 
- 
 <!-- Court cases -->
 <div class="moj-width-container govuk-!-margin-top-4"> 
     <!-- Count 1 -->
@@ -264,7 +272,6 @@
 
 
 </div> 
-
     <!-- Adjustments -->
     <div class="moj-width-container">
         <div class="govuk-grid-row">
@@ -306,7 +313,7 @@
                                     <td class="govuk-table__cell">Remand</td>
                                     <!-- Days -->
                                     <td class="govuk-table__cell">
-                                        0
+                                        3
                                     </td>
                                 </tr>
                                 <tr class="govuk-table__row">
@@ -320,7 +327,7 @@
                                     <td class="govuk-table__cell">Tagged bail</td>
                                     <!-- Days -->
                                     <td class="govuk-table__cell">
-                                        0
+                                        168
                                     </td>
                                 </tr>
                                 <tr class="govuk-table__row">
@@ -352,32 +359,22 @@
                                     <!-- Days -->
                                     <td class="govuk-table__cell">0</td>
                                 </tr>
-
-                                {% if data['toShow'] == 'ualAdded' %}
+ 
                                 <tr class="govuk-table__row">
                                     <!-- Adjustment -->
                                     <td class="govuk-table__cell">Unlawfully at large (UAL)</td>
                                     <!-- Days -->
-                                    <td class="govuk-table__cell">3
+                                    <td class="govuk-table__cell">0
                                     </td>
-                                </tr>
-                                {% else %}
-                                <tr class="govuk-table__row">
-                                    <!-- Adjustment -->
-                                    <td class="govuk-table__cell">Unlawfully at large (UAL)</td>
-                                    <!-- Days -->
-                                    <td class="govuk-table__cell">2
-                                    </td>
-                                </tr>
-                                {% endif %} 
+                                </tr> 
                             </tbody>
                         </table>
                     </div>
                     <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="detailed" role="tabpanel"
                         aria-labelledby="tab_detailed">
                        
-                        <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Additions</h3>
-                        <h4 class="govuk-heading-s govuk-!-margin-bottom-2">UAL (Unlawfully at large)</h4>
+                        <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Deductions</h3>
+                        <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Remand</h4>
                         <table class="govuk-table govuk-!-margin-bottom-8">
                             <thead class="govuk-table__head">
                                 <tr class="govuk-table__row">
@@ -385,12 +382,34 @@
                                     <th class="govuk-table__header" scope="col">Days</th>
                                 </tr>
                             </thead>
-                            <tbody class="govuk-table__body">
-
-                                {% if data['toShow'] == 'ualAdded' %}
+                            <tbody class="govuk-table__body"> 
                                 <tr class="govuk-table__row">
                             
-                                    <td class="govuk-table__cell">From {{data['revocation-date-day']}}/{{data['revocation-date-month']}} {{data['revocation-date-year']}}  to {{data['arrest-date-day']}}/{{data['arrest-date-month']}}/{{data['arrest-date-year']}}</td>
+                                    <td class="govuk-table__cell">From 13/1/2023 to ...</td>
+                                   
+                                    <td class="govuk-table__cell">168</td>
+                                </tr> 
+                                <tr class="govuk-table__row"> 
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-text-align-right">
+                                        Total days</td> 
+                                    <td class="govuk-table__cell">168
+                                    </td>
+                                </tr>
+ 
+                            </tbody>
+                        </table>
+                        <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Tagged bail</h4>
+                        <table class="govuk-table govuk-!-margin-bottom-8">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="col">Dates</th>
+                                    <th class="govuk-table__header" scope="col">Days</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body"> 
+                                <tr class="govuk-table__row">
+                            
+                                    <td class="govuk-table__cell">From 11/1/2023 to 13/1/2023</td>
                                    
                                     <td class="govuk-table__cell">3</td>
                                 </tr> 
@@ -400,23 +419,7 @@
                                     <td class="govuk-table__cell">3
                                     </td>
                                 </tr>
-
-                                {% else %}
-
-                                <tr class="govuk-table__row">
-                            
-                                    <td class="govuk-table__cell">From {{data['revocation-date-day']}}/{{data['revocation-date-month']}} {{data['revocation-date-year']}}  to {{data['arrest-date-day']}}/{{data['arrest-date-month']}}/{{data['arrest-date-year']}}</td>
-                                   
-                                    <td class="govuk-table__cell">2</td>
-                                </tr> 
-                                <tr class="govuk-table__row"> 
-                                    <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-text-align-right">
-                                        Total days</td> 
-                                    <td class="govuk-table__cell">2
-                                    </td>
-                                </tr>
-
-                                {% endif %}
+ 
                             </tbody>
                         </table>
                     </div>
@@ -424,6 +427,5 @@
             </div>
         </div>
     </div>
-
 
 {% endblock %}

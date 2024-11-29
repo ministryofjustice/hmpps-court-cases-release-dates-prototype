@@ -37,7 +37,7 @@
   
           <div class="govuk-summary-card govuk-!-margin-bottom-6">
               <div class="govuk-summary-card__title-wrapper">
-                  <h2 class="govuk-summary-card__title">{{ "today" | govukDate }} at HMP Kirkham
+                  <h2 class="govuk-summary-card__title">10 December 2024 at HMP Kirkham
                       <br>
                       <span class="govuk-body">Calculation reason: Recording a recall</span>
                   </h2>
@@ -52,8 +52,6 @@
                </div>
               <div class="govuk-summary-card__content" id="release-dates">
                 
-             
-                
                 <dl class="govuk-summary-list release-dates-list">
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
@@ -61,26 +59,16 @@
                             <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
                         </dt>
                         <dd class="govuk-summary-list__value">
-                            <p class="govuk-body">Tuesday, 4 March 2025</p>
-                        </dd>
-                    </div> 
-
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                            PRRD
-                            <p class="govuk-!-font-size-16 govuk-hint">Post recall release date</p>
-                        </dt>
-                        <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                            <p class="govuk-body">Tuesday, 4 March 2025</p>
+                            <p class="govuk-body">Friday, 02 July 2032</p>
                         </dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                            TUSED
-                            <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                            CRD
+                            <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
                         </dt>
                         <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                            <p class="govuk-body">Monday, 4 August 2025</p>
+                            <p class="govuk-body">Monday, 02 July 2029</p> 
                         </dd>
                     </div>
                 </dl>
@@ -92,7 +80,7 @@
   
           <div class="govuk-summary-card govuk-!-margin-bottom-6">
             <div class="govuk-summary-card__title-wrapper">
-                <h2 class="govuk-summary-card__title">{{ "today" | govukDate }} at HMP Kirkham
+                <h2 class="govuk-summary-card__title">10 December 2024 at HMP Kirkham
                     <br>
                     <span class="govuk-body">Calculation reason: Recording a recall</span>
                 </h2>
@@ -149,9 +137,9 @@
        
         <div class="govuk-summary-card govuk-!-margin-bottom-6">
             <div class="govuk-summary-card__title-wrapper">
-                <h2 class="govuk-summary-card__title">22 September 2024 at HMP Kirkham
+                <h2 class="govuk-summary-card__title">16 April 2024 at HMP Holme House
                     <br>
-                    <span class="govuk-body">Calculation reason: 2-day check</span>
+                    <span class="govuk-body">Calculation reason: Lodged warrant</span>
                 </h2>
                 <ul class="govuk-summary-card__actions">
                     <div class="">
@@ -169,7 +157,7 @@
                             <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
                         </dt>
                         <dd class="govuk-summary-list__value">
-                            <p class="govuk-body">Thursday, 09 January 2025</p>
+                            <p class="govuk-body">Friday, 02 July 2032</p>
                         </dd>
                     </div>
                     <div class="govuk-summary-list__row">
@@ -178,25 +166,7 @@
                             <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
                         </dt>
                         <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                            <p class="govuk-body">Tuesday, 24 September 2024 <br> <span class="govuk-!-font-size-16 govuk-hint">40% date has been applied</span></p> 
-                        </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24 govuk-!-padding-bottom-0">
-                            HDCED
-                            <p class="govuk-!-font-size-16 govuk-hint">Home detention curfew eligibility date</p>
-                        </dt>
-                        <dd class="govuk-summary-list__value govuk-!-padding-top-4"> 
-                            <p class="govuk-body">Friday, 06 September 2024 <br> <span class="govuk-!-font-size-16 govuk-hint">50% date has been applied</span></p> 
-                        </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                            TUSED
-                            <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
-                        </dt>
-                        <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                            <p class="govuk-body">Wednesday, 24 September 2025 <br> <span class="govuk-!-font-size-16 govuk-hint">Anniversary of 40% CRD</span></p>
+                            <p class="govuk-body">Monday, 02 July 2029</p> 
                         </dd>
                     </div>
                 </dl>
@@ -234,7 +204,7 @@
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   
 
-        {% if data['toShow'] == 'recallHistory' or data['toShow'] == 'calcComplete' or data['toShow'] == 'ualAdded' or data['toShow'] == 'calc2Complete'%}
+        {% if data['toShow'] == 'recallHistory' or data['toShow'] == 'ualAdded' or data['toShow'] == 'calc2Complete'%}
         <h3 class="govuk-heading-l">Recalls</h3>
        
    
