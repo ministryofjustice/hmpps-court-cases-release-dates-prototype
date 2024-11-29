@@ -1296,6 +1296,16 @@ router.get('/:prototypeVersion/launch-prototype', function(req, res) {
         req.session.data = sessionDataDefaults
         req.session.data.prototypeVersion = prototypeVersion
         console.log("Launching prototype version: " + prototypeVersion)
-        res.redirect(`/${prototypeVersion}/dps-home.html`)
+        res.redirect(`/${prototypeVersion}/dps-home`)
+    })
+})
+
+router.get('/:prototypeVersion/launch-prototype-2', function(req, res) {
+    const prototypeVersion = req.query.version
+    req.session.regenerate(function() {
+        req.session.data = sessionDataDefaults
+        req.session.data.prototypeVersion = prototypeVersion
+        console.log("Launching prototype version: " + prototypeVersion)
+        res.redirect(`/${prototypeVersion}/overview`)
     })
 })

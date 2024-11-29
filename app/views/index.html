@@ -82,7 +82,7 @@
                                     <p class="govuk-hint"></p>
 
                                     {{govukButton({
-                                        text: "Launch scenario 1",
+                                        text: "Launch from DPS home",
                                         attributes: {
                                         "formaction": "/18/launch-prototype?version=18",
                                         "formmethod": "post"
@@ -90,7 +90,17 @@
                                         classes: "govuk-button--secondary"
                                         })}} 
                                     </form>   
-                                    <a class="govuk-link" target="external" href="/18/dps-home">DPS home</a>
+
+                                    <form action="post">  
+                                    {{govukButton({
+                                        text: "Launch from overview",
+                                        attributes: {
+                                        "formaction": "/18/launch-prototype-2?version=18",
+                                        "formmethod": "post"
+                                        },
+                                        classes: "govuk-button--secondary"
+                                        })}} 
+                                    </form>    
 
 
                                 </div>
