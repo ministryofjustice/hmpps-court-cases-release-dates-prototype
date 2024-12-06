@@ -234,7 +234,8 @@ module.exports = {
                             "sentence-length-weeks": "0",
                             "sentence-length-days": "0",
                             "consecutive-concurrent": "Concurrent",
-                            "status": "active"
+                            "status": "active",
+                            "remanded": "true"
                         }
                     ]
                 }

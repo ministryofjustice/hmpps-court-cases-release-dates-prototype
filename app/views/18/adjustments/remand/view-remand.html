@@ -64,7 +64,7 @@
                                         {% set courtCaseIndex = loop.revindex0 %}  
                                         {% for sentence in lastAppearance.sentences %}
                                         {% if sentence['remanded'] == 'true' %}
-                                        <div class="govuk-!-margin-bottom-2">
+                                        <div class="govuk-!-margin-bottom-3">
                                            <b>{{ sentence['offence-name'] }} </b>
                                             <br><span>Committed on {{ sentence['offence-start-date-day'] }}/{{ sentence['offence-start-date-month'] }}/{{ sentence['offence-start-date-year'] }}</span>
                                             <br><span>Heard at {{ lastAppearance['court-name'] }}</span>
