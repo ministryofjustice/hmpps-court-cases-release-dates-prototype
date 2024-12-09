@@ -2,8 +2,8 @@
 {% if data['viewOption'] == 'adjustmentsReleasedFalse' %}
 {% extends "../includes/layouts/template-linear.html" %}
 {% else %}
-{% extends "./template.html" %}
-{% set nav = true %}
+{% extends "./template-dps-branded.html" %}
+{% set nav = false %}
 {% endif %}
 
 {% set releaseDatesActive = true %}
