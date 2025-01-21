@@ -2257,7 +2257,7 @@ router.get("/:prototypeVersion/launch-prototype", function (req, res) {
     req.session.data = sessionDataDefaults;
     req.session.data.prototypeVersion = prototypeVersion;
     console.log("Launching prototype version: " + prototypeVersion);
-    res.redirect(`/${prototypeVersion}/dps-home`);
+    res.redirect(`/${prototypeVersion}/DPS-home`);
   });
 });
 
