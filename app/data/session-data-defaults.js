@@ -65,7 +65,7 @@ module.exports = {
                             "sentence-length-months": "0",
                             "sentence-length-weeks": "0",
                             "sentence-length-days": "20",
-                            "consecutive-concurrent": "Concurrent",
+                            "consecutive-concurrent": "Concurrent to count 1",
                             "status": "active"
                         }
                     ]
@@ -233,7 +233,7 @@ module.exports = {
                             "sentence-length-months": "0",
                             "sentence-length-weeks": "0",
                             "sentence-length-days": "0",
-                            "consecutive-concurrent": "Concurrent",
+                            "consecutive-concurrent": "Concurrent to count 1",
                             "status": "active",
                             "remanded": "true"
                         }
