@@ -97,7 +97,7 @@
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-full">
                        
-                        <p class="govuk-body">These release dates were calculated on 16&nbsp;April&nbsp;2024.</p>
+                        <p class="govuk-body">These release dates were calculated on {{ "today" | govukDate }}.</p>
                         <!-- <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-4">
                             <div class="govuk-summary-list__row">
                                 <dt class="govuk-summary-list__key govuk-!-font-weight-regular" style="padding: 5px 0px 6px 0px">
@@ -156,22 +156,27 @@
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">Court case 1, count 1</td>
                                 <td class="govuk-table__cell">21 December 2021</td>
-                                <td class="govuk-table__cell">9 years</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell">Court case 1, count 2</td>
-                                <td class="govuk-table__cell">21 December 2021</td>
-                                <td class="govuk-table__cell">6 years</td>
+                                <td class="govuk-table__cell">90 months</td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">Court case 2, count 1</td>
-                                <td class="govuk-table__cell">16 April 2021</td>
-                                <td class="govuk-table__cell">20 days concurrent to <br>Court case 1, count 1</td>
+                                <td class="govuk-table__cell">21 December 2021</td>
+                                <td class="govuk-table__cell">42 months consecutive to <br>Court case 1, count 1</td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">Court case 2, count 2</td>
-                                <td class="govuk-table__cell">16 April 2021</td>
-                                <td class="govuk-table__cell">20 days concurrent to <br>Court case 2, count 1</td>
+                                <td class="govuk-table__cell">21 December 2021</td>
+                                <td class="govuk-table__cell">42 months concurrent
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">Court case 2, count 3</td>
+                                <td class="govuk-table__cell">21 December 2021</td>
+                                <td class="govuk-table__cell">2 years concurrent 
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">Court case 2, count 4</td>
+                                <td class="govuk-table__cell">21 December 2021</td>
+                                <td class="govuk-table__cell">8 months concurrent 
                             </tr>
                             </tbody>
                         </table>
