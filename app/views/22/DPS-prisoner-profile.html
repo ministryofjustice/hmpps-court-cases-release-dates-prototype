@@ -307,37 +307,11 @@
                     <div class="govuk-!-padding-top-3">
                       <p class="govuk-body-l govuk-!-font-weight-bold govuk-!-margin-bottom-2">Latest calculation </p> 
 
-                          {% if data['toShow'] == 'none' %}
+                
 
                           <p class="govuk-body">There are no release dates calculated for Joe Bloggs.</p>
-                          {% else %} 
-                          <dl class="govuk-summary-list govuk-summary-list--no-border">
-                            <div class="govuk-summary-list__row">
-                              <dt class="govuk-summary-list__key">
-                                Date of calculation
-                              </dt>
-                              <dd class="govuk-summary-list__value">
-                                16 April 2024
-                              </dd>
-                            </div>
-                            <div class="govuk-summary-list__row">
-                              <dt class="govuk-summary-list__key">
-                                Establishment
-                              </dt>
-                              <dd class="govuk-summary-list__value">
-                                HMP Holme House 
-                              </dd>
-                            </div>
-                            <div class="govuk-summary-list__row">
-                              <dt class="govuk-summary-list__key">
-                                Calculation reason
-                              </dt>
-                              <dd class="govuk-summary-list__value">
-                                Lodged warrant
-                              </dd>
-                            </div>
-                          </dl>
-                          {% endif %} 
+                  
+                   
                       
                           {% if data['toShow'] == 'none' %}
                           <p class="govuk-body"><a data-qa="overview-offences-view-all" href="no-court-cases" class="govuk-link govuk-link--no-visited-state">Court cases and release dates</a></p>

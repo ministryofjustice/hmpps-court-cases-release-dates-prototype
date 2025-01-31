@@ -271,22 +271,12 @@ console.log(activeJourney,'u')
   if(activeJourney === 3) {
     console.log('if')
     let alert = `
-        <h2 class="govuk-heading-m">There are 90 days of unused deductions</h2>
-        <p class="">
-            Unused deductions can include remand and tagged bail. They will not be taken into the calculation, but can be carried over to future licence recall cases.
-        </p>
-        <p class="">For deductions, you will need to add the unused remand alert on NOMIS.</p>
-`
+  
     document.getElementById("alerthere").innerHTML = alert
   } else {
     console.log('else')
     let alert = `
-        <h2 class="govuk-heading-m">There are 10 days of unused deductions</h2>
-        <p class="">
-            Unused deductions can include remand and tagged bail. They will not be taken into the calculation, but can be carried over to future licence recall cases.
-        </p>
-        <p class="">For deductions, you will need to add the unused remand alert on NOMIS.</p>
-`
+ 
     document.getElementById("alerthere").innerHTML = alert
   }
   function createDays(data){
@@ -325,22 +315,12 @@ if(saveTableR){
   if(activeJourney === 3) {
     console.log('if')
     let alert = `
-        <h2 class="govuk-heading-m">There are 90 days of unused deductions</h2>
-        <p class="">
-            Unused deductions can include remand and tagged bail. They will not be taken into the calculation, but can be carried over to future licence recall cases.
-        </p>
-        <p class="">For deductions, you will need to add the unused remand alert on NOMIS.</p>
-`
+      
     document.getElementById("alerthere").innerHTML = alert
   } else {
     console.log('else')
     let alert = `
-        <h2 class="govuk-heading-m">There are 10 days of unused deductions</h2>
-        <p class="">
-            Unused deductions can include remand and tagged bail. They will not be taken into the calculation, but can be carried over to future licence recall cases.
-        </p>
-        <p class="">For deductions, you will need to add the unused remand alert on NOMIS.</p>
-`
+ 
     document.getElementById("alerthere").innerHTML = alert
   }
   function createDays(data){
