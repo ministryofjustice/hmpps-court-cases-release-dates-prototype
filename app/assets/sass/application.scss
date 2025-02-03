@@ -1474,3 +1474,7 @@ box-decoration-break: clone;
 body {
   height: unset;
 }
+
+.active-filter > .govuk-checkboxes__item {
+  float: none;
+}
