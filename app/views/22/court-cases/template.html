@@ -198,33 +198,37 @@ Court cases and release dates
 <main class="govuk-main-wrapper-govuk-body">
     <div class="govuk-width-container">
         <!-- Mini profile -->
-        {% from "hmpps/components/mini-profile/macro.njk" import miniProfile %}
-        {% set person = {
-        firstName: 'Daryl',
-        lastName: 'Evans',
-        prisonerNumber: 'A1234BC',
-        dateOfBirth: '1998-09-27',
-        status: 'Active In',
-        prisonName: 'HMP Prison',
-        cellLocation: 'A-1-1'
-        } %}
-        {{ miniProfile(person, '/public/images/prisoner.jpeg', '#') }}
+   <!-- Mini profile -->
+   {% from "hmpps/components/mini-profile/macro.njk" import miniProfile %}
+   {% set person = {
+   firstName: 'Joe',
+   lastName: 'Bloggs',
+   prisonerNumber: 'A1234BC',
+   dateOfBirth: '1998-06-05',
+   status: 'Active In',
+   prisonName: 'HMP Kirkham',
+   cellLocation: 'A-1-1'
+   } %}
+   {{ miniProfile(person, '/public/images/prisoner.jpeg', '#') }}
         <!-- Naigation -->
         {% block nav %}
         {% if nav %}
         <nav class="moj-sub-navigation" aria-label="Navigation">
             <ul class="moj-sub-navigation__list">
                 <li class="moj-sub-navigation__item">
-                    <a class="moj-sub-navigation__link" href="#1">Overview</a>
+                    <a class="moj-sub-navigation__link" href="/{{data.prototypeVersion}}/overview">Overview</a>
                 </li>
                 <li class="moj-sub-navigation__item">
                     <a class="moj-sub-navigation__link" aria-current="page" href="/{{data.prototypeVersion}}/court-cases">Court cases</a>
                 </li>
                 <li class="moj-sub-navigation__item">
-                    <a class="moj-sub-navigation__link" href="#3">Adjustments</a>
+                    <a class="moj-sub-navigation__link" href="/{{data.prototypeVersion}}/adjustments">Adjustments</a>
                 </li>
                 <li class="moj-sub-navigation__item">
-                    <a class="moj-sub-navigation__link" href="#3">Release dates and calculations</a>
+                    <a class="moj-sub-navigation__link" href="/{{data.prototypeVersion}}/release-dates">Release dates and calculations</a>
+                </li>
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="/{{data.prototypeVersion}}/recalls">Recalls</a>
                 </li>
             </ul>
         </nav>
