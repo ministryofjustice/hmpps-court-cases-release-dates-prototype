@@ -228,6 +228,13 @@ Court cases and release dates
                         {% endif %} 
                     </a>
                 </li> 
+
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="/{{data.prototypeVersion}}/release-dates">Release dates and calculations
+                        {% if data['toDo'] == 'ADAupdated' or data['toDo'] == 'ADAnomis' or data['toDo'] == 'ADAnoAdjustment' or data['toDo'] == 'PADAreview' %} <span id="notifications" class="moj-notification-badge">1</span> 
+                        {% else %} 
+                        {% endif %} </a>
+                </li>
                 <li class="moj-sub-navigation__item">
                     <a class="moj-sub-navigation__link" href="/{{data.prototypeVersion}}/recalls">Recalls</a>
                 </li>
