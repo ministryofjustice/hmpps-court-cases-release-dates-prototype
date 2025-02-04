@@ -2257,78 +2257,84 @@ router.get("/:prototypeVersion/merged-cases-select", function (req, res) {
 router.post("/:prototypeVersion/select-merged-cases", function (req, res) {
   const prototypeVersion = req.params.prototypeVersion;
   const mergedFrom = req.session.data.appearance["merged-from"];
-  console.log("Merged cases: " + + mergedFrom + mergedFrom.length);
-  req.session.data.courtCases[mergedFrom]["status"] = "inactive"
-  req.session.data.courtCases[mergedFrom]["merged-with"] = req.session.data.appearance["court-case-ref"] + " at " + req.session.data.appearance["court-name"] + " on " + req.session.data.appearance["warrant-date-day"] + "/" + req.session.data.appearance["warrant-date-month"] + "/" + req.session.data.appearance["warrant-date-year"]
-  console.log(req.session.data.courtCases[mergedFrom]["status"])
-  console.log(req.session.data.courtCases[mergedFrom]["merged-with"])
+  console.log("Merged cases: " + mergedFrom.length);
+  
+  req.session.data.courtCases[mergedFrom]["status"] = "inactive";
+  req.session.data.courtCases[mergedFrom]["merged-with"] = req.session.data.appearance["court-case-ref"] + 
+    " at " + req.session.data.appearance["court-name"] + 
+    " on " + req.session.data.appearance["warrant-date-day"] + "/" + 
+    req.session.data.appearance["warrant-date-month"] + "/" + 
+    req.session.data.appearance["warrant-date-year"];
+
+  req.session.data.appearance['merged-from-case'] = req.session.data.courtCases[mergedFrom].appearances[
+    req.session.data.courtCases[mergedFrom].appearances.length - 1
+  ]["court-case-ref"];
+  
+  console.log(req.session.data.courtCases[mergedFrom]["status"]);
+  console.log(req.session.data.courtCases[mergedFrom]["merged-with"]);
+  console.log("Merged from case: " + req.session.data.appearance['merged-from-case']);
+  
   for (let i = 0; i < mergedFrom.length; i++) {
     let mergedCourtCase = req.session.data.courtCases[mergedFrom[i]];
-    console.log("Court case length: " + mergedCourtCase.appearances.length);
-    if(mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]
-      .offences) {
-    if(mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]
-      .offences.length > 0){
-        console.log(
-          "Offences: " +
-            mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]
-              .offences.length
-        );
-        for (var j = 0; j < mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1].offences.length; j++) {
-          console.log(
-            "Offence: " +
-              mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]
-                .offences[j]['offence-name']
-          );
-          if (req.session.data.appearance.offences == undefined)
-          {
-            req.session.data.appearance.offences = []
-          }
-          req.session.data.appearance.offences.push(mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1].offences[j]);
-          if (req.session.data.appearance.offences[j]["merged-from"] == undefined){
-            req.session.data.appearance.offences[j]["merged-from"] = []
-          }
-          req.session.data.appearance.offences[j]["merged-from"] = mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]['court-name'] + " on " + mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]['warrant-date-day'] + "/" + mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]['warrant-date-month'] + "/" + mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]['warrant-date-year']; 
+    let lastAppearance = mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1];
+
+    if (lastAppearance.offences && lastAppearance.offences.length > 0) {
+      for (let j = 0; j < lastAppearance.offences.length; j++) {
+        if (!req.session.data.appearance.offences) {
+          req.session.data.appearance.offences = [];
         }
-      } 
+
+        // Copy offence to avoid modifying original reference
+        let offenceToAdd = { ...lastAppearance.offences[j] };
+        
+        if (!offenceToAdd["merged-from"]) {
+          offenceToAdd["merged-from"] = [];
+        }
+
+        offenceToAdd["merged-from"] = lastAppearance["court-name"] + 
+          " on " + lastAppearance["warrant-date-day"] + "/" + 
+          lastAppearance["warrant-date-month"] + "/" + 
+          lastAppearance["warrant-date-year"];
+
+        req.session.data.appearance.offences.push(offenceToAdd);
+      }
     }
-      if(mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]
-        .sentences) {
-      if(mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]
-        .sentences.length > 0) {
-    console.log(
-      "Sentences: " +
-        mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]
-          .sentences.length
-    );
-    for (var j = 0; j < mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1].sentences.length; j++) {
-      console.log(
-        "Offence: " +
-          mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]
-            .sentences[j]['offence-name']
-      );
-      req.session.data.appearance.sentences.push(mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1].sentences[j]);
-      // let sentence = req.session.data.appearance.sentences[req.session.data.appearance.sentences - 1];
-      req.session.data.appearance.sentences[j]["merged-from"] = mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]['court-name'] + " on " + mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]['warrant-date-day'] + "/" + mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]['warrant-date-month'] + "/" + mergedCourtCase.appearances[mergedCourtCase.appearances.length - 1]['warrant-date-year']; 
+    
+    if (lastAppearance.sentences && lastAppearance.sentences.length > 0) {
+      if (!req.session.data.appearance.sentences) {
+        req.session.data.appearance.sentences = [];
+      }
+      
+      for (let j = 0; j < lastAppearance.sentences.length; j++) {
+        let sentenceToAdd = { ...lastAppearance.sentences[j] };
+        
+        sentenceToAdd["merged-from"] = lastAppearance["court-name"] + 
+          " on " + lastAppearance["warrant-date-day"] + "/" + 
+          lastAppearance["warrant-date-month"] + "/" + 
+          lastAppearance["warrant-date-year"];
+        
+        req.session.data.appearance.sentences.push(sentenceToAdd);
+      }
     }
   }
-}
-  }
-  if (prototypeVersion < 22){
-  res.redirect(
-    `/${prototypeVersion}/court-cases/additional-information/check-answers`
-  );
-} else if (prototypeVersion >= 22){
-  if (req.session.data.appearance['warrant-type'] == "Remand"){
+  
+  console.log("Final Offence List:", JSON.stringify(req.session.data.appearance.offences, null, 2));
+  
+  if (prototypeVersion < 22) {
     res.redirect(
-      `/${prototypeVersion}/court-cases/add-an-offence/check-answers-additional-information`
+      `/${prototypeVersion}/court-cases/additional-information/check-answers`
     );
-  } else {
-  res.redirect(
-    `/${prototypeVersion}/court-cases/add-a-sentence/check-answers-additional-information`
-  );
-}
-}
+  } else if (prototypeVersion >= 22) {
+    if (req.session.data.appearance['warrant-type'] == "Remand") {
+      res.redirect(
+        `/${prototypeVersion}/court-cases/add-an-offence/check-answers-additional-information`
+      );
+    } else {
+      res.redirect(
+        `/${prototypeVersion}/court-cases/add-a-sentence/check-answers-additional-information`
+      );
+    }
+  }
 });
 
 router.get("/:prototypeVersion/update-outcome", function (req, res) {
@@ -2349,10 +2355,9 @@ router.get("/:prototypeVersion/launch-prototype", function (req, res) {
     req.session.data = sessionDataDefaults;
     req.session.data.prototypeVersion = prototypeVersion;
     console.log("Launching prototype version: " + prototypeVersion);
-    res.redirect(`/${prototypeVersion}/DPS-home?toShow=noActiveSentences`);
+    res.redirect(`/${prototypeVersion}/court-cases/`);
   });
 });
-
 
 router.get("/:prototypeVersion/launch-prototype-2", function (req, res) {
   const prototypeVersion = req.query.version;
