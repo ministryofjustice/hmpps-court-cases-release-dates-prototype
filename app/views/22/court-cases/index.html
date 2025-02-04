@@ -611,7 +611,7 @@
                         </div>
                         
                         <hr class="govuk-section-break govuk-!-margin-top-4 govuk-section-break--visible">
-                        <p class="govuk-body govuk-!-margin-top-6"><a class="govuk-link--no-visited-state govuk-!-font-weight-bold" href="court-case-detail?courtCaseIndex={{loop.revindex0}}">{% if (courtCase['source'] == "nomis") or (courtCase['status'] == "inactive") %}View all appearances{% else %}View and edit all appearances {% endif %} for this court case ({% if lastAppearance['status'] == 'draft' %}{{ courtCase.appearances.length - 1 }} and 1 draft {% else %}{{ courtCase.appearances.length}}{% endif %})</a></p>
+                        <p class="govuk-body govuk-!-margin-top-6"><a class="govuk-link--no-visited-state govuk-!-font-weight-bold" href="/22/court-cases/court-case-detail?courtCaseIndex={{loop.revindex0}}">{% if (courtCase['source'] == "nomis") or (courtCase['status'] == "inactive") %}View all appearances{% else %}View and edit all appearances {% endif %} for this court case ({% if lastAppearance['status'] == 'draft' %}{{ courtCase.appearances.length - 1 }} and 1 draft {% else %}{{ courtCase.appearances.length}}{% endif %})</a></p>
                         {% endif %}
                     </div>
                 </div>
