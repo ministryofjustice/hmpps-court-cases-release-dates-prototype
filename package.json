@@ -7,20 +7,20 @@
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "2.0.1",
-    "@ministryofjustice/frontend": "3.3.1",
-    "@x-govuk/govuk-prototype-filters": "^1.4.4",
-    "govuk-frontend": "5.8.0",
+    "@ministryofjustice/frontend": "5.1.3",
+    "@x-govuk/govuk-prototype-filters": "^2.0.0",
+    "govuk-frontend": "5.10.1",
     "govuk-prototype-kit": "13.16.2",
-    "hmpps-court-cases-release-dates-design": "^2.9.5",
+    "hmpps-court-cases-release-dates-design": "^4.4.0",
     "readable": "^1.1.3",
     "readable-stream": "^4.7.0",
     "stream": "^0.0.3"
   },
   "devDependencies": {
-    "sass": "^1.79.5"
+    "sass": "^1.89.0"
   },
   "engines": {
-    "node": "^20",
-    "npm": "^10.9"
+    "node": ">=20 <=23",
+    "npm": "^10"
   }
 }
